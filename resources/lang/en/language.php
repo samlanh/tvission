@@ -69,6 +69,9 @@
   'next'=>'Next',
   'operator'=>'Operator',
   'payment'=>'Payment',
+  'booking_complete'=>'Booking Completed',
+  'summary_booking'=>'Summary Booking Ticket',
+  'booking_no'=>'Booking No',
   
    ];
 ?>

@@ -43,7 +43,7 @@ $bus = "VehicleTypeBus";
                                   </div>
                                 </div>
                                 @php 
-                                $pickupDate = date("m/d/Y");
+                                $pickupDate = date("m/d/Y",strtotime("+5 day"));
                                   if(app('request')->has('on_date')){
                                       $pickupDate = app('request')->input('on_date');
                                   }

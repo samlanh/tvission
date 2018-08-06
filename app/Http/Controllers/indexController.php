@@ -400,7 +400,21 @@ $response = curl_exec($curl);
         $token_type = Config::get('app.token_type');
         $ticket = $this->getTiketOrder($orderToken,$token_type,$access_token); 
         $payment = $this->makeBmbPayment($orderToken); 
-   
+        
+        $arrayPayment = json_decode($payment)->data;
+        dd($arrayPayment);
+        if($arrayPayment->attributes->status_code==0){
+          $this->updateOrderTicket($arrayPayment->attributes->ticket_order->token);
+        }
          return view('main.returnticket', ['paymentResult'=>$payment, 'ticketsResult' => $ticket]); 
+        }
     }
+
+
+     function updateOrderTicket($orderToken){
+          $booking = new ticketOrderModel;
+            $booking->where('token', $orderToken)
+            ->update(['status' => "completed"]);
+         return 1;
+      }
 }

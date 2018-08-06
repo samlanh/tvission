@@ -212,7 +212,10 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer <= 0) {
-            window.location.href = "http://stackoverflow.com";
+
+           alert("Your booking reservation is timeout !");
+            window.location.href = "{{ url('/') }}";
+           
             //timer = duration;
         }
     }, 1000);

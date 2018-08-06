@@ -4,7 +4,8 @@
 @php
 
 $ticket = json_decode($ticketsResult)->data;
-//dd($ticket);
+$payment = json_decode($paymentResult)->data;
+//dd($payment);
 //echo $ticket->attributes->ticket_order_number;exit();
 @endphp
 
@@ -21,6 +22,9 @@ $ticket = json_decode($ticketsResult)->data;
         	
         	<div class="col-md-7 col-xs-12 col-sm-12"> 
         		<div class="passenger-detail border-gradient-to-top pb-40 pr-20 pl-20 ">
+                    @php 
+                     if($payment->attributes->status_code==0){
+                    @endphp
 					<div class="passenger-detail-content">
 						<div class="blog-title border-bottom pb-10">
 	        				<h3 class="title-blog upercase">{{ trans('language.booking_complete') }}</h3>
@@ -45,10 +49,34 @@ $ticket = json_decode($ticketsResult)->data;
                               </div>
                             </div>
                           </div>
-                        </div>
-         
-                    
+                        </div>                
 					</div>
+                     @php 
+                     }else if($payment->attributes->status_code==1){
+                    @endphp
+                    <div class="passenger-detail-content">
+                        <div class="blog-title border-bottom pb-10">
+                            <h3 class="title-blog upercase">{{ trans('language.booking_complete') }}</h3>
+                        </div>
+                      
+
+                        <div class="col-xs-12">
+                          <div class="row">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title"><strong>Your Booking is failed</strong></h3>
+                              </div>
+                                <div class="panel-content">
+                                        <p>Your account not enough credit to process payment.</p>
+                                        <p>Please Refill your balance</p>
+                                 </div>
+                            </div>
+                          </div>
+                        </div>                
+                    </div>
+                     @php 
+                     }
+                    @endphp
 			        <div class="clearfix"></div>				
 				</div>
         	</div>

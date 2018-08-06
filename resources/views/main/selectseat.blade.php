@@ -287,11 +287,11 @@ if(app('request')->has('on_date')){
 							rowinfo+='</div>';
 							
 							rowinfo+='<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">';
-								rowinfo+='<input type="text" id="txtName'+seatRowInfo+'" name="txtName'+seatRowInfo+'" class="form-control" placeholder="Full Name">';
+								rowinfo+='<input type="text" id="txtName'+seatRowInfo+'" name="txtName'+seatRowInfo+'" class="form-control myform" placeholder="Full Name">';
 									rowinfo+='<label id="name-error'+seatRowInfo+'" class="error text-warning myerror"></label>';
 							rowinfo+='</div>';
 							rowinfo+='<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">';
-								rowinfo+='<select id="cboGender'+seatRowInfo+'" name="cboGender'+seatRowInfo+'" class="form-control">';
+								rowinfo+='<select id="cboGender'+seatRowInfo+'" name="cboGender'+seatRowInfo+'" class="form-control myform">';
 									rowinfo+='<option value="">Gender</option>';
 									rowinfo+='<option value="Male">Male</option>';
 									rowinfo+='<option value="Female">Female</option>';

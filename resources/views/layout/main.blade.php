@@ -56,64 +56,9 @@ $urlFromBack = Config::get('constants.myConstant.weburlpart');
                 <!-- Start Header-Left -->
                 <div class="col-lg-4 col-md-5 col-xs-12 header-left">
 
-                  <!-- Start Header-Contact -->
-                  <ul class="custom-list header-contact">
-                    <li>
-                      <i class="fa fa-phone"></i>
-                      +1 (123) 456-7890
-                    </li>
-                    <li>
-                      <i class="fa fa-envelope"></i>
-                        <a href="mailto:example@example.com">
-                        example@example.com
-                        </a>
-                    </li>
-                  </ul>
-                  <!-- End Header-Contact -->
+                  
                 </div>
                 <!-- End Header-Left -->
-
-                <!-- Start Header-Right -->
-                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-2 header-right">
-
-                  <!-- Start Social -->
-                  <ul class="header-social custom-list">
-                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                  </ul> 
-                  <!-- End Social -->
-
-                  <!-- Start Header-Login -->
-                  <div class="header-login">
-                    <a class="header-btn" href="{{ url('/user/sign_in') }}"> <i class="fa fa-key"></i>
-                    {{ trans('language.sign_in') }}</a>                                 
-                  </div>
-                  <!-- End Header-Login -->
-
-                  <!-- Start Header-Language -->
-                  <div class="header-language">
-                    <button class="header-btn">
-                    <i class="fa fa-globe"></i>
-                    
-                    @if(App::getLocale()=="en")
-                          <img src="{{ asset('assets/img/eng.png') }}" />
-                     @else
-                      <img src="{{ asset('assets/img/kh.png') }}" />
-                   @endif
-                  
-                    </button>
-                    <nav class="header-form">
-                      <ul class="custom-list">
-                        <li class="<?php  if(App::getLocale()=="en"){ echo "active"; }?>"><a href="javascript:;" onclick="changeLang('en')"><img src="{{ asset('assets/img/eng.png') }}" /></a></li>
-                        <li class="<?php  if(App::getLocale()=="km"){ echo "active"; }?>"><a href="javascript:;" onclick="changeLang('km')"><img src="{{ asset('assets/img/kh.png') }}" /></a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <!-- End Header-Language -->
-
-                </div>
-                <!-- End Header-Right -->
 
               </div>
             </div>
@@ -141,54 +86,11 @@ $urlFromBack = Config::get('constants.myConstant.weburlpart');
     <footer id="footer">
       <div class="container">
 
-          <!-- Start Preamble -->
-          <div class="col-lg-12 preamble">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="">
-          </div>
-          <!-- End Preamble -->
-
           <!-- Start Footer-Content -->
           <div class="footer-content">
             <div class="row">
 
-              <!-- Start Widget-About -->
-              <div class="col-lg-4 col-md-4 widget widget-about">
-                <h5>About Us</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Etiam sit amet lectus quis est congue mollis.</p>
-              </div>
-              <!-- End Widget-About -->
-
-              <!-- Start Widget-Newsletter -->
-              <div class="col-lg-4 col-md-4 widget widget-newsletter">
-                <h5>Newsletter</h5>
-                <form class="default-form">
-                  <input type="text" name="newsletter" placeholder="Your Email Here">
-                  <button class="btn light">{{ trans('language.sign_up') }}</button>
-                </form>
-              </div>
-              <!-- End Widget-Newsletter -->
-
-              <!-- Start Widget-social -->
-              <div class="col-lg-4 col-md-4 widget widget-social">
-                <div class="findUs">
-					<ul>
-						<li><a target="blank" title="Facebook" href="https://www.facebook.com/aplusfreshshop?pnref=story"><img src="{{ asset('assets/img/fb-find-us.png') }}"></a></li>
-						<li><a target="blank" title="Twitter" href="https://twitter.com"><img src="{{ asset('assets/img/twitter-find-us.png') }}"></a></li>
-						<li><a title="Customer serivce" href="/public/index/information"><img src="{{ asset('assets/img/ge-customer-service.png') }}"></a></li>
-					</ul>
-				</div>
-				<div class="paymentlist">
-					<ul>
-						<li><a target="blank" title="Facebook" href="https://www.facebook.com/aplusfreshshop?pnref=story"><img src="{{ asset('img/paypal.png') }}"></a></li>
-						<li><a target="blank" title="Twitter" href="https://twitter.com"><img src="{{ asset('assets/img/visa.png') }}"></a></li>
-						<li><a title="Customer serivce" href="/public/index/information"><img src="{{ asset('assets/img/mastercard.png') }}"></a></li>
-						<li><a title="Customer serivce" href="/public/index/information"><img src="{{ asset('assets/img/westernunion.png') }}"></a></li>
-					</ul>
-				</div>
-              </div>
-              <!-- End Widget-social -->
-
-             
+              
             </div>
         </div>
       </div>

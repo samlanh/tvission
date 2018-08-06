@@ -1512,6 +1512,7 @@ button:hover {
   font-size: 13px;
   color: #ffffff;
   font-weight: bold;
+  height: 25px;
   /* background-color: rgb(255, 255, 255); */
 }
 
@@ -4183,6 +4184,11 @@ a.logo img {
     width: 135px;
 }
 
+select.form-control.myform, input[type=text].form-control.myform {
+    border: solid 1px #b7b7b7;
+    border-radius: 0;
+}
+
 section.section-search {
     max-width: 100%;
     margin-left: auto;
@@ -4291,4 +4297,7 @@ span.vehicle-type {
 }
 .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel] {
     height: 40px;
+}
+.panel-content {
+    padding: 10px;
 }

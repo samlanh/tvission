@@ -402,18 +402,18 @@ $response = curl_exec($curl);
         $payment = $this->makeBmbPayment($orderToken); 
         
         $arrayPayment = json_decode($payment)->data;
-        dd($arrayPayment);
+        //dd($arrayPayment);
         if($arrayPayment->attributes->status_code==0){
           $this->updateOrderTicket($arrayPayment->attributes->ticket_order->token);
         }
          return view('main.returnticket', ['paymentResult'=>$payment, 'ticketsResult' => $ticket]); 
-        }
     }
 
 
+
      function updateOrderTicket($orderToken){
-          $booking = new ticketOrderModel;
-            $booking->where('token', $orderToken)
+      DB::table('tv_ticket_order')
+            ->where('token', $orderToken)
             ->update(['status' => "completed"]);
          return 1;
       }
